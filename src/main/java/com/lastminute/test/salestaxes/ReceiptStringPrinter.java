@@ -22,8 +22,6 @@ public class ReceiptStringPrinter  implements ReceiptPrinter {
 		receiptBuilder.append("Sales Taxes: "+String.format("%.2f", totalTax)+"\n");
 		receiptBuilder.append("Total: "+String.format("%.2f", totalAmount));
 		
-		log.debug(receiptBuilder.toString());
-		
 		return receiptBuilder.toString();
 	}
 

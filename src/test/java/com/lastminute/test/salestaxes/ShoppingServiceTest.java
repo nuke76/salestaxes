@@ -5,6 +5,8 @@ import java.util.List;
 
 import org.junit.Before;
 import org.junit.Test;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import com.lastminute.test.salestaxes.Item;
 import com.lastminute.test.salestaxes.ItemType;
@@ -24,6 +26,8 @@ import static org.junit.Assert.*;
 public class ShoppingServiceTest {
 
 	private ShoppingService shoppingService;
+	
+	private static final Logger log = LoggerFactory.getLogger(ShoppingServiceTest.class);
 
 	@Before
 	public void setUp() {
@@ -116,6 +120,8 @@ public class ShoppingServiceTest {
 		String expected = "1 book: 12.49\n" + "1 music CD: 16.49\n" + "1 chocolate bar: 0.85\n" + "Sales Taxes: 1.50\n" + "Total: 29.83";
 
 		assertEquals(expected, actual);
+		
+		log.info("OUTPUT 1:\n"+actual);
 
 	}
 
@@ -150,6 +156,8 @@ public class ShoppingServiceTest {
 		String expected = "1 imported box of chocolates: 10.50\n" + "1 imported bottle of perfume: 54.65\n" + "Sales Taxes: 7.65\n" + "Total: 65.15";
 
 		assertEquals(expected, actual);
+		
+		log.info("OUTPUT 2:\n"+actual);
 	}
 
 	@Test
@@ -206,6 +214,8 @@ public class ShoppingServiceTest {
 											"Total: 74.68";
 
 		assertEquals(expected, actual);
+		
+		log.info("OUTPUT 3:\n"+actual);
 	}
 
 }
