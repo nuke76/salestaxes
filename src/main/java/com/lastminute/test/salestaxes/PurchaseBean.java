@@ -1,7 +1,7 @@
 package com.lastminute.test.salestaxes;
 
 
-public class PurchaseBean  implements Purchase {
+public class PurchaseBean {
 	
 	private Item item;
 	private int quantity;
@@ -19,9 +19,8 @@ public class PurchaseBean  implements Purchase {
 		return quantity;
 	}
 
-	@Override
 	public void addQuantity(int quantity) {
-		// TODO Auto-generated method stub
+		quantity++;
 		
 	}
 

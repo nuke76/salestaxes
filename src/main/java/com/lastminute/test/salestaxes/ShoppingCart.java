@@ -4,23 +4,23 @@ import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 
-public class ShoppingCart implements Iterable<Purchase>{
+public class ShoppingCart implements Iterable<PurchaseBean>{
 	
-	private List<Purchase> purchaseList;
+	private List<PurchaseBean> purchaseList;
 	
 	public ShoppingCart() {
-		purchaseList = new ArrayList<Purchase>();
+		purchaseList = new ArrayList<PurchaseBean>();
 	}
 
-	public ShoppingCart(List<Purchase> purchaseList) {
+	public ShoppingCart(List<PurchaseBean> purchaseList) {
 		this.purchaseList = purchaseList;
 	}
-	public void addPurchase(Purchase purchase) {
+	public void addPurchase(PurchaseBean purchase) {
 		purchaseList.add(purchase);
 	}
 
 	@Override
-	public Iterator<Purchase> iterator() {
+	public Iterator<PurchaseBean> iterator() {
 		
 		return this.purchaseList.iterator();
 	}

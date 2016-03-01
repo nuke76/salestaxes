@@ -3,7 +3,7 @@ package com.lastminute.test.salestaxes;
 public class ReceiptItem {
 
 	private float amount;
-	private Purchase purchase;
+	private PurchaseBean purchase;
 	
 
 	public void setAmout(float amount) {
@@ -15,12 +15,12 @@ public class ReceiptItem {
 		return amount;
 	}
 
-	public Purchase getPurchase() {
+	public PurchaseBean getPurchase() {
 		// TODO Auto-generated method stub
 		return this.purchase;
 	}
 
-	public void setPurchase(Purchase purchase) {
+	public void setPurchase(PurchaseBean purchase) {
 		this.purchase = purchase;
 	}
 

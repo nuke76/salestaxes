@@ -25,7 +25,7 @@ public class TaxCalculatorService implements TaxCalculator {
 	}
 
 	@Override
-	public float calculateTaxForPurchase(Purchase purchase) {
+	public float calculateTaxForPurchase(PurchaseBean purchase) {
 		float tax = 0f;
 
 		Item item = purchase.getItem();

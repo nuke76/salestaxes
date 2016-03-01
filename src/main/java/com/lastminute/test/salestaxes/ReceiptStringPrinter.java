@@ -7,6 +7,7 @@ import org.slf4j.LoggerFactory;
 
 public class ReceiptStringPrinter  implements ReceiptPrinter {
 	
+	@SuppressWarnings("unused")
 	private static final Logger log = LoggerFactory.getLogger(ReceiptStringPrinter.class);
 	
 	@Override

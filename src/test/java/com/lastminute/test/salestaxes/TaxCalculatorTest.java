@@ -1,20 +1,11 @@
 package com.lastminute.test.salestaxes;
 
+import static org.junit.Assert.assertEquals;
+
 import java.util.ArrayList;
 import java.util.List;
 
 import org.junit.Test;
-
-import com.lastminute.test.salestaxes.Item;
-import com.lastminute.test.salestaxes.ItemType;
-import com.lastminute.test.salestaxes.Purchase;
-import com.lastminute.test.salestaxes.PurchaseBean;
-import com.lastminute.test.salestaxes.TaxCalculator;
-import com.lastminute.test.salestaxes.TaxCalculatorService;
-import com.lastminute.test.salestaxes.TaxRoundRule;
-import com.lastminute.test.salestaxes.TaxRoundRuleExample;
-
-import static org.junit.Assert.*;
 
 public class TaxCalculatorTest {
 
@@ -36,7 +27,7 @@ public class TaxCalculatorTest {
 		item.setItemType(ItemType.BOOKS);
 		item.setImported(false);
 		item.setPrice(12.49f);
-		Purchase purchase = new PurchaseBean(item, 1);
+		PurchaseBean purchase = new PurchaseBean(item, 1);
 
 		TaxCalculator taxCalculator = new TaxCalculatorService(exceptTaxItemTypeList, taxRoundRule, basicTaxPercentage, importedTaxPercentage);
 
@@ -64,7 +55,7 @@ public class TaxCalculatorTest {
 		item.setItemType(ItemType.FOOD);
 		item.setImported(true);
 		item.setPrice(10.00f);
-		Purchase purchase = new PurchaseBean(item, 1);
+		PurchaseBean purchase = new PurchaseBean(item, 1);
 
 		TaxCalculator taxCalculator = new TaxCalculatorService(exceptTaxItemTypeList, taxRoundRule, basicTaxPercentage, importedTaxPercentage);
 
@@ -93,7 +84,7 @@ public class TaxCalculatorTest {
 		item.setItemType(ItemType.PERFUME);
 		item.setImported(false);
 		item.setPrice(18.99f);
-		Purchase purchase = new PurchaseBean(item, 1);
+		PurchaseBean purchase = new PurchaseBean(item, 1);
 
 		TaxCalculator taxCalculator = new TaxCalculatorService(exceptTaxItemTypeList, taxRoundRule, basicTaxPercentage, importedTaxPercentage);
 

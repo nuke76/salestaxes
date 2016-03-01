@@ -18,7 +18,7 @@ public class ShoppingService {
 		List<ReceiptItem> receiptItemList = new ArrayList<ReceiptItem>();
 		float totalTax = 0.0f;
 		
-		for (Purchase purchase : cart) {
+		for (PurchaseBean purchase : cart) {
 			ReceiptItem receiptItem = new ReceiptItem();
 			receiptItem.setPurchase(purchase);
 			float amountNoTaxed = purchase.getItem().getPrice()*purchase.getQuantity();

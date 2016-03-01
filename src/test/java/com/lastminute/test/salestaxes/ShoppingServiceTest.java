@@ -10,7 +10,6 @@ import org.slf4j.LoggerFactory;
 
 import com.lastminute.test.salestaxes.Item;
 import com.lastminute.test.salestaxes.ItemType;
-import com.lastminute.test.salestaxes.Purchase;
 import com.lastminute.test.salestaxes.PurchaseBean;
 import com.lastminute.test.salestaxes.ReceiptPrinter;
 import com.lastminute.test.salestaxes.ReceiptStringPrinter;
@@ -57,9 +56,9 @@ public class ShoppingServiceTest {
 		item.setImported(false);
 		item.setItemType(ItemType.BOOKS);
 		item.setPrice(12.49f);
-		Purchase purchase = new PurchaseBean(item, quantity);
+		PurchaseBean purchase = new PurchaseBean(item, quantity);
 
-		List<Purchase> purchaseList = new ArrayList<Purchase>();
+		List<PurchaseBean> purchaseList = new ArrayList<PurchaseBean>();
 		purchaseList.add(purchase);
 
 		ShoppingCart cart = new ShoppingCart(purchaseList);
@@ -82,7 +81,7 @@ public class ShoppingServiceTest {
 	@Test
 	public void testInput1() throws Exception {
 
-		List<Purchase> purchaseList = new ArrayList<Purchase>();
+		List<PurchaseBean> purchaseList = new ArrayList<PurchaseBean>();
 
 		int quantity = 1;
 
@@ -92,7 +91,7 @@ public class ShoppingServiceTest {
 		item.setItemType(ItemType.BOOKS);
 		item.setPrice(12.49f);
 
-		Purchase purchase = new PurchaseBean(item, quantity);
+		PurchaseBean purchase = new PurchaseBean(item, quantity);
 		purchaseList.add(purchase);
 
 		item = new Item();
@@ -127,7 +126,7 @@ public class ShoppingServiceTest {
 
 	@Test
 	public void testInput2() throws Exception {
-		List<Purchase> purchaseList = new ArrayList<Purchase>();
+		List<PurchaseBean> purchaseList = new ArrayList<PurchaseBean>();
 
 		int quantity = 1;
 
@@ -137,7 +136,7 @@ public class ShoppingServiceTest {
 		item.setItemType(ItemType.FOOD);
 		item.setPrice(10.00f);
 
-		Purchase purchase = new PurchaseBean(item, quantity);
+		PurchaseBean purchase = new PurchaseBean(item, quantity);
 		purchaseList.add(purchase);
 
 		item = new Item();
@@ -162,7 +161,7 @@ public class ShoppingServiceTest {
 
 	@Test
 	public void testInput3() throws Exception {
-		List<Purchase> purchaseList = new ArrayList<Purchase>();
+		List<PurchaseBean> purchaseList = new ArrayList<PurchaseBean>();
 
 		int quantity = 1;
 
@@ -172,7 +171,7 @@ public class ShoppingServiceTest {
 		item.setItemType(ItemType.PERFUME);
 		item.setPrice(27.99f);
 
-		Purchase purchase = new PurchaseBean(item, quantity);
+		PurchaseBean purchase = new PurchaseBean(item, quantity);
 		purchaseList.add(purchase);
 
 		item = new Item();
